@@ -10,41 +10,48 @@ import javax.swing.*;
 public class Gui {
     public void ventana(){
         JFrame marco = new JFrame("Boletin 23");
-            marco.setLayout(null);
-            marco.setSize(800,800);
+            marco.setSize(340, 500);
             
         //Panel1
         JPanel panel1 = new JPanel();
-            panel1.setBounds(0, 0, 320, 320);
+            panel1.setSize(340, 250);
+            panel1.setLayout(null);
             
         //Elementos panel1
         JLabel etiquetaNome = new JLabel("Nome");
-            etiquetaNome.setSize(50,50);
+            etiquetaNome.setBounds(50, 10, 150, 100);
         JLabel etiquetaPass = new JLabel("Password");
-            etiquetaPass.setSize(50,50);
+            etiquetaPass.setBounds(50, 85, 150, 100);
         JTextField casillaNome = new JTextField(10);
-            casillaNome.setSize(50,50);
+            casillaNome.setBounds(150, 50, 100, 30);
         JPasswordField contrasinal = new JPasswordField(10);
-            contrasinal.setSize(50,50);
+            contrasinal.setBounds(150, 125, 100, 30);
         JButton premer = new JButton("Premer");
-            premer.setSize(50,50);
+            premer.setBounds(50, 210, 85, 30);
         JButton limpar = new JButton("Limpar");
-            limpar.setSize(50,50);
+            limpar.setBounds(150, 210, 85, 30);
             
         //Panel2    
         JPanel panel2 = new JPanel();
-            panel2.setBounds(0, 40, 100, 100);
+            panel2.setSize(340,250);
+            panel2.setLayout(null);
+            
         //Elementos panel2    
         JButton boton = new JButton("Boton");
-            boton.setSize(10,10);
-        String [] lista ={"ElementoLista1","ElementoLista2","ElementoLista3","ElementoLista4"};
+            boton.setBounds(150, 340, 85, 35);
+        String [] lista ={
+            "ElementoLista1",
+            "ElementoLista2",
+            "ElementoLista3",
+            "ElementoLista4"
+        };
         JList l = new JList(lista);
+            l.setBounds(30, 340, 110, 50);
         JTextArea area = new JTextArea("Area texto",5,15);
+            area.setBounds(250, 340, 80, 40);
+            
         
-        //Layout panel1
-        panel1.setLayout(new GridLayout(3,2));
-        //FlowLayout dis = new FlowLayout(FlowLayout.RIGHT,3,2);
-            //panel1.setLayout(dis);
+        
             panel1.add(etiquetaNome);
             panel1.add(casillaNome);
             panel1.add(etiquetaPass);
@@ -53,10 +60,9 @@ public class Gui {
             panel1.add(limpar);
             
         
-        //Layout panel2
-        //FlowLayout dis2 = new FlowLayout(FlowLayout.RIGHT,4,5);
-          //  panel2.setLayout(dis2);    
-            panel2.setLayout(new GridLayout(1,3));
+        
+           
+         
             
             panel2.add(area);
             panel2.add(boton);
